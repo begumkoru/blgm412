@@ -28,9 +28,6 @@ int main()
 	avg=calculateAverage(ar, NUM_OF_ELEMENTS);
 	printf("\nThe average of the array elements is %.2f\n",avg);
 
-	/*calling a function to reverse the numeric value of each array element*/
-	reverseValues(ar, NUM_OF_ELEMENTS);
-
 	system("pause");
 	return 0;
 }
@@ -64,24 +61,4 @@ float calculateAverage(int array[], int size)
 	sum=calculateSum(array, NUM_OF_ELEMENTS);
 	avg=(float)sum/NUM_OF_ELEMENTS;
     return avg;
-}
-
-/*function to reverse the numeric value of each array element*/
-void reverseValues(int array[], int size)
-{
-	/*local variable definition*/
-	int a,b,i;
-	printf("\nReversing the values.");
-	printf("\nThe array now contains: ");
-
-	for(i=0; i<NUM_OF_ELEMENTS; i++)
-	{
-		b=array[i]/10;
-		a=array[i]%10;
-		array[i]= (10*a)+b;
-	}
-
-	for(i=0; i<NUM_OF_ELEMENTS; i++)
-		printf("%d ",array[i]);
-	printf("\n\n\n");
 }
